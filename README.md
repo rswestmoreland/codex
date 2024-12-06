@@ -57,7 +57,7 @@ The **Attributes** define the specific data points or characteristics associated
 14. **Method**: The method or technique used in the event (e.g., HTTP method like GET or POST).
 15. **Name**: The name or title of the event, entity, or resource.
 
-### Example: Type Definitions
+### Type Definitions
 
 - **Log**: A record of an event or activity, typically associated with a system or application (e.g., web server log, firewall log).
 - **Event**: A discrete occurrence or action, such as a login attempt, file access, or policy violation.
