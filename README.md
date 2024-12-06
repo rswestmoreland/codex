@@ -1,10 +1,10 @@
-# CODEX: Cyber Operations Data eXchange and Extensibility
+# CODEX: Cyber Operations Data Exchange and eXtensibility
 
 **CODEX** is a cybersecurity data framework focused on defining and classifying log data entities, attributes, and relationships. Designed for flexibility and extensibility, CODEX provides a set of standards for handling log data, classifying it into well-structured entities, and ensuring compatibility with various storage systems.
 
 ## Overview
 
-CODEX provides a comprehensive, well-documented approach to organizing cybersecurity log data. It focuses on defining the entities (e.g., IP addresses, users, events), their attributes (e.g., timestamps, actions), and types (e.g., logs, events, risks) for efficient data classification. The framework is highly extensible, allowing for new definitions to be added as log formats evolve or new data types are introduced.
+CODEX provides a comprehensive, well-documented approach to organizing cybersecurity log data. It focuses on defining the entities (e.g., IP addresses, users, and events), their attributes (e.g., timestamps, actions), and types (e.g., logs, events, risks) for efficient data classification. The framework is highly extensible, allowing for new definitions to be added as log formats evolve or new data types are introduced.
 
 ### Core Documents
 
@@ -20,39 +20,41 @@ The CODEX project is structured around several key definitions documents, which 
 The **Entities** define the key components tracked within your cybersecurity data. These are typically the core subjects that your log data records are associated with.
 
 1. **Account**: The user or system account involved in an event or log entry.
-2. **Resource**: The specific resource being accessed, used, or targeted.
-3. **Command**: The action or command issued by a user or system process.
-4. **Host Name**: The name of the machine or host involved in an event.
-5. **IP Address**: The network address associated with a system, user, or device.
-6. **MAC Address**: The hardware address for network interfaces on a device.
-7. **Protocol**: The communication protocol involved (e.g., TCP, HTTP, FTP).
+2. **User Name**: The user who is associated with the event or action.
+3. **Host Name**: The name of the machine or host involved in an event.
+4. **IP Address**: The network address associated with a system, user, or device.
+5. **MAC Address**: The hardware address for network interfaces on a device.
+6. **Email Address**: The email address tied to the event, potentially used for phishing, logins, or alerts.
+7. **Resource**: The specific resource being accessed, used, or targeted.
 8. **Domain**: The domain related to the event, such as a DNS domain or a domain name system.
 9. **URL**: The uniform resource locator involved in the event, usually for web interactions.
 10. **Path**: The directory or file path associated with the event.
-11. **Hash**: A cryptographic hash used to verify file integrity or identify files.
+11. **Command**: The action or command issued by a user or system process.
 12. **Process Name**: The name of a running process that is logged during an event.
 13. **Registry Key**: A Windows registry key that relates to the event, typically used in system events or malware investigations.
-14. **User Name**: The user who is associated with the event or action.
-15. **Email Address**: The email address tied to the event, potentially used for phishing, logins, or alerts.
+14. **Protocol**: The communication protocol involved (e.g., TCP, HTTP, FTP).
+15. **Hash**: A cryptographic hash used to verify file integrity or identify files.
+
+---
 
 ## Attribute Definitions
 
 The **Attributes** define the specific data points or characteristics associated with the entities in the logs. These attributes provide further detail and context to the entity.
 
-1. **Receipt Time**: The time the event or log entry was received.
-2. **Create Time**: The time at which the event or data was originally created.
-3. **Modified Time**: The time when the data or event was modified.
-4. **Port**: The network port used during the communication.
-5. **Bytes**: The volume of data transmitted during the event.
-6. **Message**: The message or description that accompanies an event.
-7. **Reason**: The reason or rationale behind the event (e.g., login failure, action denied).
-8. **ID**: A unique identifier associated with the log or event.
-9. **Product**: The product involved in the event, such as the software or hardware that generated the log.
-10. **Method**: The method or technique used in the event (e.g., HTTP method like GET or POST).
-11. **Severity**: The severity level of the event, often used to classify the event's importance or threat level.
-12. **Type**: The type of event (e.g., authentication attempt, access violation).
-13. **Action**: The specific action performed in the event (e.g., file created, login succeeded).
-14. **Outcome**: The result of the event (e.g., success, failure, warning).
+1. **ID**: A unique identifier associated with the log or event.
+2. **Severity**: The severity level of the event, often used to classify the event's importance or threat level.
+3. **Type**: The type of event (e.g., authentication attempt, access violation).
+4. **Action**: The specific action performed in the event (e.g., file created, login succeeded).
+5. **Outcome**: The result of the event (e.g., success, failure, warning).
+6. **Receipt Time**: The time the event or log entry was received.
+7. **Create Time**: The time at which the event or data was originally created.
+8. **Modified Time**: The time when the data or event was modified.
+9. **Message**: The message or description that accompanies an event.
+10. **Reason**: The reason or rationale behind the event (e.g., login failure, action denied).
+11. **Port**: The network port used during the communication.
+12. **Bytes**: The volume of data transmitted during the event.
+13. **Product**: The product involved in the event, such as the software or hardware that generated the log.
+14. **Method**: The method or technique used in the event (e.g., HTTP method like GET or POST).
 15. **Name**: The name or title of the event, entity, or resource.
 
 ### Example: Type Definitions
@@ -79,7 +81,7 @@ To extend CODEX, simply add a new entry in the appropriate document:
 
 1. **Entity Definitions**: Define new entities as they appear in your logs (e.g., "Firewall", "Endpoint").
 2. **Attribute Classifications**: Introduce new attributes that are relevant to your log data.
-3. **Relationship Models**: If your entities interact in new ways (e.g., a "User" accesses a "Firewall"), define this relationship clearly. (TBD)
+3. **Relationship Models**: If your entities interact in new ways (e.g., a "User" accesses a "Firewall"), define this relationship clearly.
 
 By following this approach, you can maintain a dynamic and scalable data model that adapts to the latest cybersecurity trends and technologies.
 
