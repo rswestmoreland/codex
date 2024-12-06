@@ -1,4 +1,4 @@
-# CODEX: Cyber Operations Data Exchange and eXtensibility
+# CODEX: Cyber Operations Data Entity eXchange
 
 **CODEX** is a cybersecurity data framework focused on defining and classifying log data entities, attributes, and relationships. Designed for flexibility and extensibility, CODEX provides a set of standards for handling log data, classifying it into well-structured entities, and ensuring compatibility with various storage systems.
 
