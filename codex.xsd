@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <!-- Root element -->
+  <xs:element name="DataRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Metadata about the record -->
+        <xs:element name="Type" type="xs:string"/>
+        <xs:element name="Entity" type="xs:string"/>
+        <xs:element name="Attribute" type="xs:string"/>
+        <xs:element name="Timestamp" type="xs:dateTime"/>
+        
+        <!-- Data content -->
+        <xs:element name="Value" type="xs:string"/>
+        <!-- Optional metadata fields -->
+        <xs:element name="SourceSystem" type="xs:string" minOccurs="0"/>
+        <xs:element name="DestinationSystem" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Enumerations for specific types, entities, and attributes -->
+  <xs:simpleType name="TypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="log"/>
+      <xs:enumeration value="event"/>
+      <xs:enumeration value="agent"/>
+      <xs:enumeration value="device"/>
+      <xs:enumeration value="source"/>
+      <xs:enumeration value="destination"/>
+      <xs:enumeration value="network"/>
+      <xs:enumeration value="file"/>
+      <xs:enumeration value="request"/>
+      <xs:enumeration value="application"/>
+      <xs:enumeration value="risk"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EntityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="account"/>
+      <xs:enumeration value="user_name"/>
+      <xs:enumeration value="host_name"/>
+      <xs:enumeration value="ip_address"/>
+      <xs:enumeration value="mac_address"/>
+      <xs:enumeration value="email_address"/>
+      <xs:enumeration value="resource"/>
+      <xs:enumeration value="domain"/>
+      <xs:enumeration value="url"/>
+      <xs:enumeration value="path"/>
+      <xs:enumeration value="command"/>
+      <xs:enumeration value="process_name"/>
+      <xs:enumeration value="registry_key"/>
+      <xs:enumeration value="protocol"/>
+      <xs:enumeration value="hash"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AttributeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="receipt_time"/>
+      <xs:enumeration value="create_time"/>
+      <xs:enumeration value="modified_time"/>
+      <xs:enumeration value="port"/>
+      <xs:enumeration value="bytes"/>
+      <xs:enumeration value="message"/>
+      <xs:enumeration value="reason"/>
+      <xs:enumeration value="id"/>
+      <xs:enumeration value="product"/>
+      <xs:enumeration value="method"/>
+      <xs:enumeration value="severity"/>
+      <xs:enumeration value="type"/>
+      <xs:enumeration value="action"/>
+      <xs:enumeration value="outcome"/>
+      <xs:enumeration value="name"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
