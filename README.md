@@ -118,6 +118,10 @@ Many of these keys are not used in practice (e.g., risk.registry_key, file.mac_a
 
 CODEX is designed to be flexible and easily extensible. You can add new entity definitions, attributes, and relationships as your needs evolve. This extensibility ensures the framework can accommodate new log formats, data types, and evolving cybersecurity use cases.
 
+### XML Schema File
+
+XML Schema Definition for CODEX [codex.xsd](codex.xsd)
+
 ### Adding New Definitions
 
 To extend CODEX, simply add a new entry in the appropriate document:
