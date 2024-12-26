@@ -21,17 +21,17 @@ The CODEX project is structured around several key definitions documents, which 
 
 The **Types** define the context of the entities and attributes, and serve as a root of the taxonomy.  In data processing systems this can be used to quickly match against certain kinds of events for routing or filtering, either by an exact match (e.g. record.type == 'src') or an anchored pattern (e.g. record =~ /^src\./).
 
-- **Log**: A record of an event or activity, typically associated with a system or application (e.g., web server log, firewall log).
-- **Event**: A discrete occurrence or action, such as a login attempt, file access, or policy violation.
-- **Agent**: A software component or system that generates or collects data (e.g., endpoint agent, SIEM agent).
-- **Device**: Hardware or virtual devices involved in the data transaction or log generation (e.g., routers, firewalls, servers).
-- **Source**: The origin of the log data or event, such as an IP address or an external device.
-- **Destination**: The target or endpoint affected by the event or data transmission (e.g., destination IP address, application).
-- **Network**: Defines the network layer, connections, and flow of data across devices and systems.
-- **File**: Represents files or data objects that are being accessed, transferred, or modified in relation to the event (e.g., file name, path).
-- **Request**: Describes requests made between systems or users, such as HTTP requests, API calls, or database queries.
-- **Application**: Software or services that interact with the data, such as web applications, databases, or security tools.
-- **Risk**: The level of threat or exposure associated with an event or log entry, usually assessed based on severity or impact.
+- **Log** (log): A record of an event or activity, typically associated with a system or application (e.g., web server log, firewall log).
+- **Event** (evt): A discrete occurrence or action, such as a login attempt, file access, or policy violation.
+- **Agent** (agt): A software component or system that generates or collects data (e.g., endpoint agent, SIEM agent).
+- **Device** (dvc): Hardware or virtual devices involved in the data transaction or log generation (e.g., routers, firewalls, servers).
+- **Source** (src): The origin of the log data or event, such as an IP address or an external device.
+- **Destination** (dest): The target or endpoint affected by the event or data transmission (e.g., destination IP address, application).
+- **Network** (net): Defines the network layer, connections, and flow of data across devices and systems.
+- **File** (file): Represents files or data objects that are being accessed, transferred, or modified in relation to the event (e.g., file name, path).
+- **Request** (req): Describes requests made between systems or users, such as HTTP requests, API calls, or database queries.
+- **Application** (app): Software or services that interact with the data, such as web applications, databases, or security tools.
+- **Risk** (risk): The level of threat or exposure associated with an event or log entry, usually assessed based on severity or impact.
 
 ## Entity Definitions
 
