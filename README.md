@@ -72,6 +72,7 @@ The **Attributes** define the specific data points or characteristics associated
 13. **Product**: The product involved in the event, such as the software or hardware that generated the log.
 14. **Method**: The method or technique used in the event (e.g., HTTP method like GET or POST).
 15. **Name**: The name or title of the event, entity, or resource.
+16. **Count**: The total occurrences tracked by the originator of the event (e.g., IDS or SIEM).
 
 ---
 
