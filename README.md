@@ -19,7 +19,7 @@ The CODEX project is structured around several key definitions documents, which 
 
 ## Category Definitions
 
-The **Categories** define the context of the entities and attributes, and serve as a root of the taxonomy. Key names use a lowercase short-form. In data processing systems this can be used to quickly match against certain kinds of events for routing or filtering, either by an exact match (e.g. record.type == 'src') or an anchored pattern (e.g. record =~ /^src_/).
+The **Categories** define the context of the entities and attributes, and serve as a root of the taxonomy. Key names use a lowercase short-form. In data processing systems this can be used to quickly match against certain kinds of events for routing or filtering, either by an exact match (e.g. record.category == 'src') or an anchored pattern (e.g. record =~ /^src_/).
 
 - **Log** (log): A record of an event or activity, typically associated with a system or application (e.g., web server log, firewall log).
 - **Event** (evt): A discrete occurrence or action, such as a login attempt, file access, or policy violation.
