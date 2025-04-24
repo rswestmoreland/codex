@@ -34,6 +34,8 @@
       <xs:enumeration value="request"/>
       <xs:enumeration value="application"/>
       <xs:enumeration value="risk"/>
+      <xs:enumeration value="old"/>
+      <xs:enumeration value="new"/>
     </xs:restriction>
   </xs:simpleType>
 
